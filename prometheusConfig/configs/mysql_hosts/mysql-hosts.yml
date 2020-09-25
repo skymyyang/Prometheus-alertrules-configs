@@ -1,0 +1,9 @@
+- targets: ['127.0.0.1:9104']
+  labels:
+    name: 'IT-RDS-002'
+    rdsid: 'rm-2ze0yn0xl86dc4l0o'
+
+- targets: ['192.168.1.69:9104']
+  labels:
+    name: 'IT-RDS-003'
+    rdsid: 'rm-2ze328710n6ul33kw'

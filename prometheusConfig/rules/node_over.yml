@@ -1,0 +1,12 @@
+groups:
+- name: NodeAlertRules
+  rules:
+  - alert: NodeIsDown
+    expr: up == 0
+    for: 1m
+    labels:
+      severity: warning
+    annotations:
+      summary: "Host node is down (instance {{ $labels.instance }})"
+      description: "{{ $labels.instance }} of job {{ $labels.job }} hase been down for more than 1 minutes."
+

@@ -1,0 +1,39 @@
+- targets: ['192.168.1.70:9100']
+  labels:
+    name: 'IT-ECS-Prometheus'
+    tomcatsvc: 'camp-ts'
+
+
+- targets: ['192.168.1.69:9100']
+  labels:
+    name: 'IT-ECS-006'
+    tomcatsvc: 'camp'
+
+- targets: ['192.168.1.68:9100']
+  labels:
+    name: 'IT-ECS-005'
+    svctype: 'Fastdfs'
+
+- targets: ['192.168.1.67:9100']
+  labels:
+    name: 'IT-ECS-004'
+    tomcatsvc: 'sell.acc'
+
+- targets: ['192.168.1.66:9100']
+  labels:
+    name: 'IT-ECS-003'
+    tomcatsvc: 'card.xtapp.ia'
+
+- targets: ['192.168.1.65:9100']
+  labels:
+    name: 'iZ2ze2ggxyejn9r2xvgyoxZ'
+    rename: 'IT-ECS-001'
+    tomcatsvc: 'all'
+
+- targets: ['192.168.1.64:9100']
+  labels:
+    name: 'iZ2ze1pa0vrgjbehfm9r0fZ'
+    rename: 'IT-ECS-002'
+    tomcatsvc: 'ia.zrx.kty'
+    svctype: 'nginx'
+

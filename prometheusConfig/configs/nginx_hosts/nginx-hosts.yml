@@ -1,0 +1,7 @@
+- targets: ['192.168.1.64:9113']
+  labels:
+    name: 'nginx-all'
+
+- targets: ['192.168.1.65:9113']
+  labels:
+    name: 'coreapi'

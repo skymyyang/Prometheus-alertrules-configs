@@ -1,0 +1,86 @@
+- targets: ['192.168.1.69:9010']
+  labels:
+    name: 'tomcatcamp_port'
+    instance: 'tomcatcamp_port_status'
+    group: 'tcp'
+
+- targets: ['192.168.1.68:22122']
+  labels:
+    name: 'fastdfs_trackerd_port'
+    instance: 'fastdfs_port_status'
+    group: 'tcp'
+
+- targets: ['192.168.1.68:23000']
+  labels:
+    name: 'fastdfs_storaged_prot'
+    instance: 'fastdfs_port_status'
+    group: 'tcp'
+
+- targets: ['192.168.1.68:9300']
+  labels:
+    name: 'es_tcp_port'
+    instance: 'es_tcp_port_status'
+    group: 'tcp'
+
+- targets: ['192.168.1.67:9010']
+  labels:
+    name: 'tomcatsell_port'
+    instance: 'tomcatsell_port_status'
+    group: 'tcp'
+
+- targets: ['192.168.1.67:9020']
+  labels:
+    name: 'tomcatacc_port'
+    instance: 'tomcatacc_port_status'
+    group: 'tcp'
+
+- targets: ['192.168.1.66:9010']
+  labels:
+    name: 'tomcatxtapp_port'
+    instance: 'tomcatxtapp_port_status'
+    group: 'tcp'
+
+- targets: ['192.168.1.66:9020']
+  labels:
+    name: 'tomcatia_port'
+    instance: 'tomcatia_port_status'
+    group: 'tcp'
+
+
+- targets: ['192.168.1.66:9030']
+  labels:
+    name: 'tomcatcard_port'
+    instance: 'tomcatcard_port_status'
+    group: 'tcp'
+
+
+- targets: ['192.168.1.65:9010']
+  labels:
+    name: 'tomcatall_port'
+    instance: 'tomcatall_port_status'
+    group: 'tcp'
+
+
+- targets: ['192.168.1.64:9010']
+  labels:
+    name: 'tomcatia_port'
+    instance: 'tomcatia_port_status'
+    group: 'tcp'
+
+
+- targets: ['192.168.1.64:9020']
+  labels:
+    name: 'tomcatzrx_port'
+    instance: 'tomcatzrx_port_status'
+    group: 'tcp'
+
+
+
+- targets: ['192.168.1.64:9030']
+  labels:
+    name: 'tomcatkty_port'
+    instance: 'tomcatkty_port_status'
+    group: 'tcp'
+
+
+

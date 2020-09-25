@@ -1,0 +1,21 @@
+global:
+  resolve_timeout: 2m
+  wechat_api_url: 'https://qyapi.weixin.qq.com/cgi-bin/'
+  wechat_api_secret: 'MWqZ2yaIZvBKkVi5lUxPpuEIgl7q2Dxxxxs'
+  wechat_api_corp_id: 'ww5fxxxxxxxx'
+
+route:
+  group_by: ['alertname']
+  group_wait: 10s
+  group_interval: 10s
+  repeat_interval: 8h
+  receiver: 'wechat'
+
+receivers:
+- name: 'wechat'
+  wechat_configs:
+  - send_resolved: true
+    to_user: 'LiMing'
+    agent_id: '1000016'
+templates:
+- /usr/local/alertmanager/template.tmpl
