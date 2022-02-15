@@ -1,0 +1,46 @@
+version: '3.7'
+
+services:
+  prometheus:
+    image: prom/prometheus:v2.25.0
+    hostname: prometheus
+    restart: always
+    user: root
+    ports: 
+      - "9090:9090"
+    volumes:
+      - ./prometheus:/etc/prometheus
+      # - ./prometheus/warn.tmpl:/etc/prometheus/warn.tmpl
+      # - ./prometheus/rules:/etc/prometheus/rules
+      - /data/prometheus/data:/prometheus
+
+  alertmanager:
+    image: prom/alertmanager:v0.21.0
+    hostname: alertmanager
+    restart: always
+    user: root
+    ports:
+      - "9093:9093"
+    volumes:
+      - /data/alertmanager/data:/alertmanager
+      - ./alertmanager/alertmanager.yml:/etc/alertmanager/alertmanager.yml
+      - ./alertmanager/warn.tmpl:/etc/alertmanager/warn.tmpl
+
+  grafana:
+    image: grafana/grafana:7.4.3
+    hostname: grafana
+    restart: always
+    user: root
+    ports:
+      - "3000:3000"
+    volumes:
+      - /data/grafana/data:/var/lib/grafana
+      - /data/grafana/log:/var/log/grafana
+      - ./grafana/ldap.toml:/etc/grafana/ldap.toml
+      - ./grafana/defaults.ini:/usr/share/grafana/conf/defaults.ini
+
+networks:
+  default:
+    external:
+      name: tools
+
